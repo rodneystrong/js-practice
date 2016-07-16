@@ -15,8 +15,8 @@ var todoList = {
     },
     //change todo item
     //takes in # param (position) and any value type param (newValue)
-    changeItem: function(position, newValue) {
-      this.todos[position] = newValue;
+    changeItem: function(position, todoText) {
+      this.todos[position].todoText = todoText;
     },
     //delete todo item
     deleteItem: function(position) {
