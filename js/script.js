@@ -1,13 +1,16 @@
 //store todos in object
 var todoList = {
-    todos: ['item1','item2','item3'],
+    todos: [],
     //display todo items
     displayItems: function() {
       console.log(this.todos);
     },
     //add todo item
-    addItem: function(item) {
-      this.todos.push(item);
+    addItem: function(itemText) {
+      this.todos.push({
+        itemTextProp: itemText,
+        completed: false
+      });
       this.displayItems();
     },
     //change todo item
