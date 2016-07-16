@@ -18,6 +18,14 @@ var todoList = {
     changeItem: function(position, todoText) {
       this.todos[position].todoText = todoText;
     },
+    //toggle completed state
+    toggleCompleted: function(position) {
+      //we can do it like the line below, but it's a lot of typing
+      //this.todos[position].completedd = !this.todos[position];
+      //instead we create a var equal to the position
+      var item = this.todos[position];
+      item.completed = !item.completed;
+    },
     //delete todo item
     deleteItem: function(position) {
       this.todos.splice(position, 1);
