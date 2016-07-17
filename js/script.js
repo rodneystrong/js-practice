@@ -22,8 +22,8 @@ var todoList = {
           else {
             console.log('() ' + this.todos[i].itemTextProp);
           }
-        }
-      }
+        } //end for loop
+      } //end else
     },
     //add todo item
     addItem: function(itemText) {
