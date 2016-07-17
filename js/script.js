@@ -13,7 +13,16 @@ var todoList = {
         //display item text
         for(i=0; i < this.todos.length; i++) {
           console.log(this.todos[i].itemTextProp);
-          console.log(this.todos[i].completed);
+          //if completed
+            //show (x)
+          //else
+            //show ()
+          if(this.todos[i].completed) {
+            console.log('(X)');
+          }
+          else {
+            console.log('()');
+          }
         }
       }
     },
