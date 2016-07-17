@@ -3,7 +3,11 @@ var todoList = {
     todos: [],
     //display todo items
     displayItems: function() {
-      console.log(this.todos);
+      //console.log(this.todos);
+      //display item text
+      for(i=0; i < this.todos.length; i++) {
+        console.log(this.todos[i].itemTextProp);
+      }
     },
     //add todo item
     addItem: function(itemText) {
