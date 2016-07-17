@@ -4,6 +4,10 @@ var todoList = {
     //display todo items
     displayItems: function() {
       //console.log(this.todos);
+      //check if todos is empty
+      if(this.todos.length === 0) {
+        console.log('empty list');
+      }
       //display item text
       for(i=0; i < this.todos.length; i++) {
         console.log(this.todos[i].itemTextProp);
