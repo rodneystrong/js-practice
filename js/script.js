@@ -8,9 +8,13 @@ var todoList = {
       if(this.todos.length === 0) {
         console.log('empty list');
       }
-      //display item text
-      for(i=0; i < this.todos.length; i++) {
-        console.log(this.todos[i].itemTextProp);
+      else {
+        console.log('My Todos:');
+        //display item text
+        for(i=0; i < this.todos.length; i++) {
+          console.log(this.todos[i].itemTextProp);
+          console.log(this.todos[i].completed);
+        }
       }
     },
     //add todo item
