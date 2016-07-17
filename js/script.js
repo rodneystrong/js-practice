@@ -12,16 +12,15 @@ var todoList = {
         console.log('My Todos:');
         //display item text
         for(i=0; i < this.todos.length; i++) {
-          console.log(this.todos[i].itemTextProp);
           //if completed
             //show (x)
           //else
             //show ()
           if(this.todos[i].completed) {
-            console.log('(X)');
+            console.log('(X) ' + this.todos[i].itemTextProp);
           }
           else {
-            console.log('()');
+            console.log('() ' + this.todos[i].itemTextProp);
           }
         }
       }
