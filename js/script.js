@@ -49,6 +49,27 @@ var todoList = {
     //delete todo item
     deleteItem: function(position) {
       this.todos.splice(position, 1);
+    },
+    //toggle all complete/incomplete
+    toggleAll: function() {
+      //var called completedItems === totalItems
+      var totalItems = this.todos.length;
+      var completedItems = 0;
+      //if all completed
+      if(completedItems === totalItems) {
+        //get completedItems
+        for(i=0; i < totalItems; i++) {
+          if(this.todos[i].completed) {
+            this.todos[i].completed = false;
+          }
+        }
+      }
+      //else
+      else {
+        for(i=0; i < totalItems; i++) {
+          completedItems++;
+      }
+
     }
 };
 
