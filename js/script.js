@@ -80,7 +80,12 @@ var todoList = {
     }
 };
 
-//need access to the 
+//need access to the display button
+var displayBtn = document.querySelector('.display');
+
+displayBtn.addEventListener('click', function() {
+  todoList.displayItems();
+});
 
 //display todos
 
