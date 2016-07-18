@@ -55,6 +55,12 @@ var todoList = {
       //var called completedItems === totalItems
       var totalItems = this.todos.length;
       var completedItems = 0;
+      //get # of completed items
+      for(i=0; i < totalItems; i++) {
+        if(this.todos[i].completed) {
+          completedItems++;
+        }
+      }
       //if all completed
       if(completedItems === totalItems) {
         //get completedItems
@@ -67,7 +73,8 @@ var todoList = {
       //else
       else {
         for(i=0; i < totalItems; i++) {
-          completedItems++;
+          this.todos[i].completed = true;
+        }
       }
 
     }
