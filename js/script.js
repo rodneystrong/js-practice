@@ -104,6 +104,7 @@ var addItemInput = document.querySelector('.add-item-input');
 addItemBtn.addEventListener('click', function() {
   //console.log(addItemInput.value);
   todoList.addItem(addItemInput.value);
+  addItemInput.value = '';
 });
 
 //event listener to run addItem fn
