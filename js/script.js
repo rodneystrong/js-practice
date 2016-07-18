@@ -95,6 +95,20 @@ toggleBtn.addEventListener('click',function(){
   todoList.toggleAll();
 });
 
+//grab add item button
+var addItemBtn = document.querySelector('.add-item');
+
+//grab input field
+var addItemInput = document.querySelector('.add-item-input');
+
+addItemBtn.addEventListener('click', function() {
+  console.log(addItemInput.value);
+  //todoList.addItem(addItemInput.value);
+});
+
+//event listener to run addItem fn
+
+
 //display todos
 
 
