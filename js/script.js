@@ -87,6 +87,14 @@ displayBtn.addEventListener('click', function() {
   todoList.displayItems();
 });
 
+//access to toggle button
+var toggleBtn = document.querySelector('.toggle');
+
+//event listener to run the toggleAll fn
+toggleBtn.addEventListener('click',function(){
+  todoList.toggleAll();
+});
+
 //display todos
 
 
