@@ -10,6 +10,12 @@ body {
   margin-bottom: 30px;
 }
 
+.add-item-input {
+  font-size: 20px;
+  padding: 18px;
+  width: 50%;
+}
+
 button {
   cursor: pointer;
   font-size: 20px;
