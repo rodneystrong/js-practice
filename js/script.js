@@ -118,8 +118,10 @@ deleteBtn.addEventListener('click', function() {
   todoList.deleteItem(deleteItemInput.valueAsNumber);
 });
 
-//Button to toggle an item
-var toggleBtn
+//Button to toggle ONE item
+var toggleBtn = document.querySelector('.toggle-item');
+
+
 
 //
 // //display all the todos
