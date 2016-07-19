@@ -88,10 +88,10 @@ displayBtn.addEventListener('click', function() {
 });
 
 //access to toggle button
-var toggleBtn = document.querySelector('.toggle');
+var toggleAllBtn = document.querySelector('.toggle');
 
 //event listener to run the toggleAll fn
-toggleBtn.addEventListener('click',function(){
+toggleAllBtn.addEventListener('click',function(){
   todoList.toggleAll();
 });
 
@@ -118,6 +118,8 @@ deleteBtn.addEventListener('click', function() {
   todoList.deleteItem(deleteItemInput.valueAsNumber);
 });
 
+//Button to toggle an item
+var toggleBtn
 
 //
 // //display all the todos
