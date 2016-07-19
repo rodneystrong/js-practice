@@ -120,7 +120,13 @@ deleteBtn.addEventListener('click', function() {
 
 //Button to toggle ONE item
 var toggleBtn = document.querySelector('.toggle-item');
+//grab input for specific item to toggle
+var toggleItemInput = document.querySelector('.toggle-item-input');
 
+toggleBtn.addEventListener('click', function() {
+  todoList.toggleCompleted(toggleItemInput.valueAsNumber);
+  toggleItemInput.value = '';
+});
 
 
 //
