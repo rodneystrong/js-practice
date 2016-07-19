@@ -107,10 +107,15 @@ addItemBtn.addEventListener('click', function() {
   addItemInput.value = '';
 });
 
-//event listener to run addItem fn
-
-
-//display todos
+//delete todo item
+//grab button
+var deleteBtn = document.querySelector('.delete-item');
+//grab input for delete
+var deleteItemInput = document.querySelector('.delete-item-input');
+//event to delete onclick
+deleteBtn.addEventListener('click', function() {
+  console.log(deleteItemInput.valueAsNumber);
+});
 
 
 //
