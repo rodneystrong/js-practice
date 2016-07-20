@@ -146,8 +146,14 @@ var views = {
     //go through your array of todos and create LIs for them
     for(i=0; i < todoList.todos.length; i++) {
       var theLi = document.createElement('li');
-      theLi.textContent = todoList.todos[i].itemTextProp;
-      //theLi.innerHTML = theLiText;
+      var position = todoList.todo[i];
+      if(position.completed === true) {
+        theLi.textContent = '(x) ' + position.itemTextProp;
+      }
+      else {
+        theLi.textContent = '( ) ' + position.itemTextProp;
+      }
+      //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
   }
