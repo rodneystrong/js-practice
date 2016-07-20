@@ -138,11 +138,18 @@ var views = {
   //create an li
   //get the value from the input and put it to the li
   displayItems: function() {
-      var theUl = document.querySelector('.the-list');
+    if(todoList.todos.length === 0) {
+      console.log('no items yet');
+    }
+    var theUl = document.querySelector('.the-list');
+    //go through your array of todos and create LIs for them
+    for(i=0; i < todoList.todos.length; i++) {
       var theLi = document.createElement('li');
+      //theLi.textContent =
       console.log(addItemInput.value);
       //theLi.innerHTML = theLiText;
       theUl.appendChild(theLi);
+    }
   }
 };
 
