@@ -117,6 +117,7 @@ var deleteItemInput = document.querySelector('.delete-item-input');
 deleteBtn.addEventListener('click', function() {
   //console.log(deleteItemInput.valueAsNumber);
   todoList.deleteItem(deleteItemInput.valueAsNumber);
+  deleteItemInput.value = '';
 });
 
 //Button to toggle ONE item
