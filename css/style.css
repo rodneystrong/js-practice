@@ -21,3 +21,7 @@ button {
   font-size: 20px;
   padding: 20px;
 }
+
+.the-list li {
+  background: #eee;
+}
