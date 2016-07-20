@@ -80,20 +80,14 @@ var todoList = {
     }
 };
 
-//need access to the display button
-var displayBtn = document.querySelector('.display');
-
-displayBtn.addEventListener('click', function() {
-  //todoList.displayItems();
-  views.displayItems();
-});
-
+//EVENTS!
 //access to toggle button
 var toggleAllBtn = document.querySelector('.toggle');
 
 //event listener to run the toggleAll fn
 toggleAllBtn.addEventListener('click',function(){
   todoList.toggleAll();
+  views.displayItems();
 });
 
 //grab add item button
@@ -106,6 +100,7 @@ addItemBtn.addEventListener('click', function() {
   //console.log(addItemInput.value);
   todoList.addItem(addItemInput.value);
   addItemInput.value = '';
+  views.displayItems();
 });
 
 //delete todo item
@@ -118,6 +113,7 @@ deleteBtn.addEventListener('click', function() {
   //console.log(deleteItemInput.valueAsNumber);
   todoList.deleteItem(deleteItemInput.valueAsNumber);
   deleteItemInput.value = '';
+  views.displayItems();
 });
 
 //Button to toggle ONE item
@@ -128,6 +124,7 @@ var toggleItemInput = document.querySelector('.toggle-item-input');
 toggleBtn.addEventListener('click', function() {
   todoList.toggleCompleted(toggleItemInput.valueAsNumber);
   toggleItemInput.value = '';
+  views.displayItems();
 });
 
 //should be an li for every todo
