@@ -142,6 +142,7 @@ var views = {
       console.log('no items yet');
     }
     var theUl = document.querySelector('.the-list');
+    theUl.innerHTML = '';
     //go through your array of todos and create LIs for them
     for(i=0; i < todoList.todos.length; i++) {
       var theLi = document.createElement('li');
