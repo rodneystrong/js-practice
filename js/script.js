@@ -2,29 +2,29 @@
 var todoList = {
     todos: [],
     //display todo items
-    displayItems: function() {
-      //console.log(this.todos);
-      //check if todos is empty
-      if(this.todos.length === 0) {
-        console.log('empty list');
-      }
-      else {
-        console.log('My Todos:');
-        //display item text
-        for(i=0; i < this.todos.length; i++) {
-          //if completed
-            //show (x)
-          //else
-            //show ()
-          if(this.todos[i].completed) {
-            console.log('(X) ' + this.todos[i].itemTextProp);
-          }
-          else {
-            console.log('() ' + this.todos[i].itemTextProp);
-          }
-        } //end for loop
-      } //end else
-    },
+    // displayItems: function() {
+    //   //console.log(this.todos);
+    //   //check if todos is empty
+    //   if(this.todos.length === 0) {
+    //     console.log('empty list');
+    //   }
+    //   else {
+    //     console.log('My Todos:');
+    //     //display item text
+    //     for(i=0; i < this.todos.length; i++) {
+    //       //if completed
+    //         //show (x)
+    //       //else
+    //         //show ()
+    //       if(this.todos[i].completed) {
+    //         console.log('(X) ' + this.todos[i].itemTextProp);
+    //       }
+    //       else {
+    //         console.log('() ' + this.todos[i].itemTextProp);
+    //       }
+    //     } //end for loop
+    //   } //end else
+    // },
     //add todo item
     addItem: function(itemText) {
       this.todos.push({
@@ -127,6 +127,21 @@ toggleBtn.addEventListener('click', function() {
   todoList.toggleCompleted(toggleItemInput.valueAsNumber);
   toggleItemInput.value = '';
 });
+
+//should be an li for every todo
+//every item should have .todoText
+//each item shows completed property
+
+var views = {
+  //grab the ul
+  //create an li
+  //get the value from the input and put it to the li
+  displayTodos: function() {
+      var theUl = document.querySelector('.the-list');
+      var theLi = document.createElement('li');
+      var theLiText = todoList.todos.itemTextProp;
+  }
+};
 
 
 //
