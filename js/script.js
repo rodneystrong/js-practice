@@ -139,14 +139,14 @@ var views = {
   //get the value from the input and put it to the li
   displayItems: function() {
     if(todoList.todos.length === 0) {
-      console.log('no items yet');
+      alert('no items yet');
     }
     var theUl = document.querySelector('.the-list');
     theUl.innerHTML = '';
     //go through your array of todos and create LIs for them
     for(i=0; i < todoList.todos.length; i++) {
       var theLi = document.createElement('li');
-      var position = todoList.todo[i];
+      var position = todoList.todos[i];
       if(position.completed === true) {
         theLi.textContent = '(x) ' + position.itemTextProp;
       }
