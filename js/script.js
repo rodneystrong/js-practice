@@ -140,8 +140,8 @@ var views = {
   displayItems: function() {
       var theUl = document.querySelector('.the-list');
       var theLi = document.createElement('li');
-      console.log(todoList.todos.itemTextProp);
-      theLi.innerHTML = theLiText;
+      console.log(addItemInput.value);
+      //theLi.innerHTML = theLiText;
       theUl.appendChild(theLi);
   }
 };
