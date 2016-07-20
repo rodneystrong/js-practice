@@ -31,7 +31,7 @@ var todoList = {
         itemTextProp: itemText,
         completed: false
       });
-      this.displayItems();
+      //this.displayItems();
     },
     //change todo item
     //takes in # param (position) and any value type param (newValue)
@@ -84,7 +84,8 @@ var todoList = {
 var displayBtn = document.querySelector('.display');
 
 displayBtn.addEventListener('click', function() {
-  todoList.displayItems();
+  //todoList.displayItems();
+  views.displayItems();
 });
 
 //access to toggle button
@@ -136,10 +137,13 @@ var views = {
   //grab the ul
   //create an li
   //get the value from the input and put it to the li
-  displayTodos: function() {
+  displayItems: function() {
       var theUl = document.querySelector('.the-list');
       var theLi = document.createElement('li');
       var theLiText = todoList.todos.itemTextProp;
+      console.log(theLiText);
+      theLi.innerHTML = theLiText;
+      theUl.appendChild(theLi);
   }
 };
 
