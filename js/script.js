@@ -47,9 +47,9 @@ var todoList = {
       item.completed = !item.completed;
     },
     //delete todo item
-    deleteItem: function(position) {
-      this.todos.splice(position, 1);
-    },
+    // deleteItem: function(position) {
+    //   this.todos.splice(position, 1);
+    // },
     //toggle all complete/incomplete
     toggleAll: function() {
       //var called completedItems === totalItems
@@ -154,9 +154,18 @@ var views = {
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
+  },
+  deleteItem: function() {
+
   }
 };
 
+//create delete buttons on all items
+//assign click event for the delete buttons
+//make sure the click delete's the specific item it's next to
+//most likely will have for loop and attach delete click to
+//specific array item in the items.
+//run the displayItems() after each delete.
 
 //
 // //display all the todos
