@@ -118,12 +118,12 @@ addItemInput.addEventListener('keypress', function(e) {
 
 //delete todo item
 //grab button
-var deleteBtn = document.querySelector('.delete-item');
+
 //grab input for delete
-var deleteItemInput = document.querySelector('.delete-item-input');
+
 //event to delete onclick
 deleteBtn.addEventListener('click', function() {
-  
+
 
   views.displayItems();
 });
@@ -167,8 +167,8 @@ var views = {
       theUl.appendChild(theLi);
     }
   },
-  deleteItem: function() {
-
+  createDeleteButton: function() {
+    var the
   }
 };
 
