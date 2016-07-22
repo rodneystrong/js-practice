@@ -122,11 +122,11 @@ addItemInput.addEventListener('keypress', function(e) {
 //grab input for delete
 
 //event to delete onclick
-deleteBtn.addEventListener('click', function() {
-
-
-  views.displayItems();
-});
+// deleteBtn.addEventListener('click', function() {
+//
+//
+//   views.displayItems();
+// });
 
 //Button to toggle ONE item
 var toggleBtn = document.querySelector('.toggle-item');
@@ -159,6 +159,8 @@ var views = {
       var position = todoList.todos[i];
       if(position.completed === true) {
         theLi.textContent = '(x) ' + position.itemTextProp;
+        // this.createDeleteButton();
+        // theLi.appendChild(deleteBtn);
       }
       else {
         theLi.textContent = '( ) ' + position.itemTextProp;
@@ -168,7 +170,8 @@ var views = {
     }
   },
   createDeleteButton: function() {
-    var the
+    var deleteBtn = document.createElement('button').setAttribute('class','delete-item');
+    deleteBtn.innerHTML = "Delete";
   }
 };
 
