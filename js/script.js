@@ -159,19 +159,21 @@ var views = {
       var position = todoList.todos[i];
       if(position.completed === true) {
         theLi.textContent = '(x) ' + position.itemTextProp;
-        // this.createDeleteButton();
-        // theLi.appendChild(deleteBtn);
+        this.createDeleteButton();
+        theLi.appendChild(deleteBtn);
       }
       else {
         theLi.textContent = '( ) ' + position.itemTextProp;
+        this.createDeleteButton();
+        theLi.appendChild(deleteBtn);
       }
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
   },
   createDeleteButton: function() {
-    var deleteBtn = document.createElement('button').setAttribute('class','delete-item');
-    deleteBtn.innerHTML = "Delete";
+    var deleteBtn = document.createElement('button')//.setAttribute('class','delete-item');
+    deleteBtn.textContent = "Delete";
   }
 };
 
