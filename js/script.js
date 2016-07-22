@@ -107,7 +107,7 @@ addItemBtn.addEventListener('click', function() {
 addItemBtn.addEventListener('click', function() {
   addItemInput.focus();
 });
-
+//allow user to hit enter key to add item
 addItemInput.addEventListener('keypress', function(e) {
   if(e.keyCode === 13) {
     todoList.addItem(addItemInput.value);
