@@ -159,21 +159,27 @@ var views = {
       var position = todoList.todos[i];
       if(position.completed === true) {
         theLi.textContent = '(x) ' + position.itemTextProp;
-        this.createDeleteButton();
-        theLi.appendChild(deleteBtn);
+        // this.createDeleteButton();
+        // theLi.appendChild(deleteBtn);
       }
       else {
         theLi.textContent = '( ) ' + position.itemTextProp;
-        this.createDeleteButton();
-        theLi.appendChild(deleteBtn);
+        // this.createDeleteButton();
+        // theLi.appendChild(deleteBtn);
+        // theLi.appendChild(this.createDeleteButton());
+        // console.log(deleteBtn);
       }
+      theLi.appendChild(this.createDeleteButton());
+      console.log(deleteBtn);
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
   },
   createDeleteButton: function() {
-    var deleteBtn = document.createElement('button')//.setAttribute('class','delete-item');
-    deleteBtn.textContent = "Delete";
+    var deleteBtn = document.createElement('button');
+    deleteBtn.className = 'delete-item';
+    console.log(deleteBtn);
+    return deleteBtn;
   }
 };
 
