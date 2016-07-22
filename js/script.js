@@ -103,6 +103,19 @@ addItemBtn.addEventListener('click', function() {
   views.displayItems();
 });
 
+//refocus on addItem input
+addItemBtn.addEventListener('click', function() {
+  addItemInput.focus();
+});
+
+addItemInput.addEventListener('keypress', function(e) {
+  if(e.keyCode === 13) {
+    todoList.addItem(addItemInput.value);
+    addItemInput.value = '';
+    views.displayItems();
+  }
+});
+
 //delete todo item
 //grab button
 var deleteBtn = document.querySelector('.delete-item');
@@ -111,8 +124,8 @@ var deleteItemInput = document.querySelector('.delete-item-input');
 //event to delete onclick
 deleteBtn.addEventListener('click', function() {
   //console.log(deleteItemInput.valueAsNumber);
-  todoList.deleteItem(deleteItemInput.valueAsNumber);
-  deleteItemInput.value = '';
+  views.deleteItem(deleteItemInput.valueAsNumber);
+
   views.displayItems();
 });
 
