@@ -123,8 +123,7 @@ var deleteBtn = document.querySelector('.delete-item');
 var deleteItemInput = document.querySelector('.delete-item-input');
 //event to delete onclick
 deleteBtn.addEventListener('click', function() {
-  //console.log(deleteItemInput.valueAsNumber);
-  views.deleteItem(deleteItemInput.valueAsNumber);
+  
 
   views.displayItems();
 });
