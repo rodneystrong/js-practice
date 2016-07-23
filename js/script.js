@@ -118,15 +118,12 @@ addItemInput.addEventListener('keypress', function(e) {
 
 //delete todo item
 //grab button
-
-//grab input for delete
-
 //event to delete onclick
-// deleteBtn.addEventListener('click', function() {
+// views.deleteBtn.addEventListener('click', function() {
+//   console.log('clicked!');
 //
-//
-//   views.displayItems();
 // });
+
 
 //Button to toggle ONE item
 var toggleBtn = document.querySelector('.toggle-item');
@@ -138,10 +135,6 @@ toggleBtn.addEventListener('click', function() {
   toggleItemInput.value = '';
   views.displayItems();
 });
-
-//should be an li for every todo
-//every item should have .todoText
-//each item shows completed property
 
 var views = {
   //grab the ul
@@ -159,29 +152,25 @@ var views = {
       var position = todoList.todos[i];
       if(position.completed === true) {
         theLi.textContent = '(x) ' + position.itemTextProp;
-        // this.createDeleteButton();
-        // theLi.appendChild(deleteBtn);
       }
       else {
         theLi.textContent = '( ) ' + position.itemTextProp;
-        // this.createDeleteButton();
-        // theLi.appendChild(deleteBtn);
-        // theLi.appendChild(this.createDeleteButton());
-        // console.log(deleteBtn);
       }
       theLi.appendChild(this.createDeleteButton());
-      console.log(this.createDeleteButton());
+      theLi.className = 'a'+i;
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
   },
+  deleteBtn: this.deleteBtn,
   createDeleteButton: function() {
-    var deleteBtn = document.createElement('button');
+    deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-item';
     console.log(deleteBtn);
     return deleteBtn;
   },
 };
+
 
 //create delete buttons on all items
 //assign click event for the delete buttons
