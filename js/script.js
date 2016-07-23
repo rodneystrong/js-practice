@@ -1,31 +1,6 @@
 //store todos in object
 var todoList = {
     todos: [],
-    //display todo items
-    // displayItems: function() {
-    //   //console.log(this.todos);
-    //   //check if todos is empty
-    //   if(this.todos.length === 0) {
-    //     console.log('empty list');
-    //   }
-    //   else {
-    //     console.log('My Todos:');
-    //     //display item text
-    //     for(i=0; i < this.todos.length; i++) {
-    //       //if completed
-    //         //show (x)
-    //       //else
-    //         //show ()
-    //       if(this.todos[i].completed) {
-    //         console.log('(X) ' + this.todos[i].itemTextProp);
-    //       }
-    //       else {
-    //         console.log('() ' + this.todos[i].itemTextProp);
-    //       }
-    //     } //end for loop
-    //   } //end else
-    // },
-    //add todo item
     addItem: function(itemText) {
       this.todos.push({
         itemTextProp: itemText,
@@ -117,12 +92,11 @@ addItemInput.addEventListener('keypress', function(e) {
 });
 
 //delete todo item
-//grab button
-//event to delete onclick
 var theUl = document.querySelector('.the-list');
 theUl.addEventListener('click', function(e) {
+  console.log(e);
   console.log(e.target.parentNode.className);
-
+  views.displayItems();
 });
 
 
