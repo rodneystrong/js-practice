@@ -170,7 +170,7 @@ var views = {
         // console.log(deleteBtn);
       }
       theLi.appendChild(this.createDeleteButton());
-      console.log(deleteBtn);
+      console.log(this.createDeleteButton());
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
@@ -180,7 +180,7 @@ var views = {
     deleteBtn.className = 'delete-item';
     console.log(deleteBtn);
     return deleteBtn;
-  }
+  },
 };
 
 //create delete buttons on all items
