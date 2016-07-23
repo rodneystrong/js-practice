@@ -23,7 +23,7 @@ var todoList = {
     },
     //delete todo item
     deleteItem: function(position) {
-      this.todos.deleteItem(position);
+      this.todos.splice(position, 1);
     },
     //toggle all complete/incomplete
     toggleAll: function() {
@@ -96,6 +96,10 @@ var theUl = document.querySelector('.the-list');
 theUl.addEventListener('click', function(e) {
   console.log(e);
   console.log(e.target.parentNode.className);
+  var theClicked = e.target;
+  if(theClicked.className === 'delete-item') {
+    todoList.deleteItem(parseInt(theClicked.parentNode.className));
+  }
   views.displayItems();
 });
 
