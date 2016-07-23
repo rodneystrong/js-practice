@@ -119,10 +119,11 @@ addItemInput.addEventListener('keypress', function(e) {
 //delete todo item
 //grab button
 //event to delete onclick
-// views.deleteBtn.addEventListener('click', function() {
-//   console.log('clicked!');
-//
-// });
+var theUl = document.querySelector('.the-list');
+theUl.addEventListener('click', function(e) {
+  console.log(e.target.parentNode.className);
+
+});
 
 
 //Button to toggle ONE item
@@ -144,7 +145,6 @@ var views = {
     if(todoList.todos.length === 0) {
       alert('no items yet');
     }
-    var theUl = document.querySelector('.the-list');
     theUl.innerHTML = '';
     //go through your array of todos and create LIs for them
     for(i=0; i < todoList.todos.length; i++) {
@@ -162,7 +162,6 @@ var views = {
       theUl.appendChild(theLi);
     }
   },
-  deleteBtn: this.deleteBtn,
   createDeleteButton: function() {
     deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-item';
