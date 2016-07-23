@@ -22,9 +22,9 @@ var todoList = {
       item.completed = !item.completed;
     },
     //delete todo item
-    // deleteItem: function(position) {
-    //   this.todos.splice(position, 1);
-    // },
+    deleteItem: function(position) {
+      this.todos.deleteItem(position);
+    },
     //toggle all complete/incomplete
     toggleAll: function() {
       //var called completedItems === totalItems
@@ -131,7 +131,7 @@ var views = {
         theLi.textContent = '( ) ' + position.itemTextProp;
       }
       theLi.appendChild(this.createDeleteButton());
-      theLi.className = 'a'+i;
+      theLi.className = i;
       //theLi.textContent = todoList.todos[i].itemTextProp;
       theUl.appendChild(theLi);
     }
